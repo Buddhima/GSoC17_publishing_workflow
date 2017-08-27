@@ -80,10 +80,6 @@ class Archive extends Articles
 		$states = array_filter($states);
 
 		$this->setState('filter.states', $states);
-		
-
-		var_dump($this->state);
-		exit;
 	}
 
 	/**
@@ -101,8 +97,6 @@ class Archive extends Articles
 		$catids           = array_values(array_diff($catids, array('')));
 		$state            = $app->input->getVar('state', array());
 		$state            = array_values(array_diff($state, array('')));
-var_dump($this->getState('filter.states'));
-exit;
 
 		$articleOrderDate = $params->get('order_date');
 
