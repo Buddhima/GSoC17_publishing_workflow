@@ -71,17 +71,17 @@ class ArticlesArchiveHelper
 
 		$i     = 0;
 		$lists = array();
-
+print_r('before');		print_r($states);
 		$states = array_map(
 			function ($el)
 			{
-				return '&states[]=' . (int) $el;
+				return '&state[]=' . (int) $el;
 			},
 			$states
 		);
-
+print_r('after');		print_r($states);
 		$states = implode($states);
-
+print_r('then');		print_r($states);
 		foreach ($rows as $row)
 		{
 			$date = Factory::getDate($row->created);
